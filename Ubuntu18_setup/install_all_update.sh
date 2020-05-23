@@ -107,3 +107,43 @@ fi
 ' >> ./install_all.sh
 
 
+####ImageJ
+echo "" >> ./install_all.sh
+echo '
+read -p "Install ImageJ? [Y/N]" answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+' >> ./install_all.sh
+    	
+echo $(tail -n +2 ImageJ/imagej.sh) >> ./install_all.sh
+echo 'else
+   	 echo "Skipping ImageJ installation"
+fi
+' >> ./install_all.sh
+
+
+####Horus
+echo "" >> ./install_all.sh
+echo '
+read -p "Install Horus? [Y/N]" answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+' >> ./install_all.sh
+    	
+echo $(tail -n +2 Horus/horus.sh) >> ./install_all.sh
+echo 'else
+   	 echo "Skipping Horus installation"
+fi
+' >> ./install_all.sh
+
+####System and Communication
+echo "" >> ./install_all.sh
+echo '
+read -p "Install System and Communication softwares? [Y/N]" answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+' >> ./install_all.sh
+    	
+echo $(tail -n +2 System\ and\ Communication/sc.sh) >> ./install_all.sh
+echo 'else
+   	 echo "Skipping System and Communication softwares installation"
+fi
+' >> ./install_all.sh
+
