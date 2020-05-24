@@ -79,3 +79,33 @@ else
    	 echo "Skipping R-studio installation"
 fi
 
+
+
+read -p "Install ImageJ? [Y/N]" answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+
+sudo apt-get install imagej; sudo apt-get update;
+else
+   	 echo "Skipping ImageJ installation"
+fi
+
+
+
+read -p "Install Horus? [Y/N]" answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+
+sudo add-apt-repository ppa:bqlabs/horus-dev; sudo apt-get update; sudo apt-get install horus;
+else
+   	 echo "Skipping Horus installation"
+fi
+
+
+
+read -p "Install System and Communication softwares? [Y/N]" answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+
+sudo apt-get install psensor; sudo apt-get install htop; sudo apt-get install gedit; sudo apt-get install ksysguard; sudo apt-get install zoom; sudo apt-get install traceroute; sudo apt-get install wireshark; sudo apt-get install zenmap; sudo apt-get update; sensible-browser https://www.basemark.com/benchmarks/basemark-gpu/ &;
+else
+   	 echo "Skipping System and Communication softwares installation"
+fi
+
