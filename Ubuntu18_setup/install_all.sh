@@ -24,7 +24,7 @@ fi
 read -p "Install Atom? [Y/N]" answer
 if [ "$answer" != "${answer#[Yy]}" ] ;then
 
-sudo apt-get install atom; sudo apt-get update;
+sudo add-apt-repository ppa:webupd8team/atom; sudo apt-get update; sudo apt-get install atom; sudo apt-get update;
 else
    	 echo "Skipping Atom installation"
 fi
