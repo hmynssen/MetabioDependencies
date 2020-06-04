@@ -104,7 +104,7 @@ fi
 read -p "Install System and Communication softwares? [Y/N]" answer
 if [ "$answer" != "${answer#[Yy]}" ] ;then
 
-sudo apt-get install psensor; sudo apt-get install htop; sudo apt-get install gedit; sudo apt-get install ksysguard; sudo apt-get install zoom; sudo apt-get install traceroute; sudo apt-get install wireshark; sudo apt-get install zenmap; sudo apt-get update; sensible-browser https://www.basemark.com/benchmarks/basemark-gpu/ &;
+sudo apt-get install psensor; sudo apt-get install htop; sudo apt-get install gedit; sudo apt-get install ksysguard; sudo apt-get install zoom; sudo apt-get install traceroute; sudo apt-get install wireshark; sudo apt-get install zenmap; sudo snap install openboard; sudo apt-get update; sensible-browser https://www.basemark.com/benchmarks/basemark-gpu/ &;
 else
    	 echo "Skipping System and Communication softwares installation"
 fi
