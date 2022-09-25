@@ -10,3 +10,5 @@ echo "Installing Matplotlib";
 pip3 install matplotlib;
 echo "Installing Scipy";
 pip3 install scipy;
+echo "Installing Stitcher";
+pip3 install brain-stitcher
